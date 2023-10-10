@@ -1,4 +1,4 @@
-.carousel {
+/*.carousel {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,15 +12,50 @@
     height: 100%;
 }
 
-.carousel1-thumbnails {
+.carousel-thumbnails {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.carousel1-thumbnails img {
+.carousel-thumbnails img {
     width: 100px;
     height: 100px;
     margin: 10px;
     cursor: pointer;
 }
+*/
+
+.carousel-container {
+    max-width: 600px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+}
+.carousel-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.carousel-navigation button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.carousel-navigation button:hover {
+    background-color: #2980b9;
+}
+
