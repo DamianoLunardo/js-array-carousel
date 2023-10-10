@@ -18,25 +18,37 @@ let currentIndex = 0;
 
 // Ora devo mostrare l'immagine corrente. L'indice viene moltiplicato per -100% per determinare quanto spostare l'elemento.
 function showSlide(index) {
-    carouselSlide.style.transform = `translateX(-${index * 100}%)`;
+    //bonus 1 scorrimento continuo immagini
+    currentIndex = (index + images.length) % images.length;
+    carouselSlide.style.transform = `translateX(-${currentIndex * 100}%)`;
 };
 
-// Funzioni per la gestione dei pulsanti
+// Funzioni per la gestione dei pulsanti. modifiche per scorrimento continuo
 prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        showSlide(currentIndex);
-        updateButtons();
-    }
+ currentIndex--;
+showSlide(currentIndex);   
 });
 
 nextButton.addEventListener('click', () => {
-    if (currentIndex < images.length - 1) {
-        currentIndex++;
-        showSlide(currentIndex);
-        updateButtons();
-    }
+    currentIndex++;
+    showSlide(currentIndex);
 });
+
+//prevButton.addEventListener('click', () => {
+   // if (currentIndex > 0) {
+      //  currentIndex--;
+      //  showSlide(currentIndex);
+      //  updateButtons();
+   // }
+//});
+
+//nextButton.addEventListener('click', () => {
+   // if (currentIndex < images.length - 1) {
+      //  currentIndex++;
+       // showSlide(currentIndex);
+        //updateButtons();
+   // }
+//});
 
 // Inizializza l'array delle immagini
 for (let i = 0; i < images.length; i++) {
@@ -46,6 +58,8 @@ for (let i = 0; i < images.length; i++) {
     img.className = i === currentIndex ? 'visible' : 'hidden';
     carouselSlide.appendChild(img);
 };
+
+showSlide(currentIndex);
 
 
 
