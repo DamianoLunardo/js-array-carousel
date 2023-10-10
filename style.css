@@ -1,0 +1,26 @@
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.carousel1-thumbnails {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel1-thumbnails img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    cursor: pointer;
+}
