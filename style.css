@@ -1,31 +1,3 @@
-/*.carousel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 400px;
-    margin: 0 auto;
-}
-
-.carousel-image img {
-    width: 100%;
-    height: 100%;
-}
-
-.carousel-thumbnails {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.carousel-thumbnails img {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    cursor: pointer;
-}
-*/
-
 .carousel-container {
     max-width: 600px;
     margin: 0 auto;

@@ -34,32 +34,14 @@ nextButton.addEventListener('click', () => {
     showSlide(currentIndex);
 });
 
-//prevButton.addEventListener('click', () => {
-   // if (currentIndex > 0) {
-      //  currentIndex--;
-      //  showSlide(currentIndex);
-      //  updateButtons();
-   // }
-//});
-
-//nextButton.addEventListener('click', () => {
-   // if (currentIndex < images.length - 1) {
-      //  currentIndex++;
-       // showSlide(currentIndex);
-        //updateButtons();
-   // }
-//});
-
 // Inizializza l'array delle immagini
 for (let i = 0; i < images.length; i++) {
     const img = document.createElement ('img');
     img.src = images [i];
-    img.alt = `Image ${i + 1}`;
     img.className = i === currentIndex ? 'visible' : 'hidden';
     carouselSlide.appendChild(img);
 };
 
-showSlide(currentIndex);
 
 
 
