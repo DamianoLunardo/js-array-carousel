@@ -35,31 +35,41 @@
 
 .carousel-slide {
     display: flex;
+    position: relative;
 }
+
 .carousel-slide img {
     width: 100%;
     height: auto;
 }
 
 .carousel-navigation {
-    text-align: center;
-    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .carousel-navigation button {
-    background-color: #3498db;
+    background-color: #d4e2eb;
     color: white;
     border: none;
-    padding: 10px 20px;
+    border-radius: 50%;
     cursor: pointer;
-    margin: 0 10px;
 }
 
 .carousel-navigation button:hover {
-    background-color: #2980b9;
+    background-color: #070708;
 }
 
-.prova {
-  height: 800px;
+#prevButton {
+    color: red;
 }
+
+#nextButton {
+    color: red;
+}
+
 
