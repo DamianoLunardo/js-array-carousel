@@ -18,16 +18,23 @@ let currentIndex = 0;
 
 // Ora devo mostrare l'immagine corrente. L'indice viene moltiplicato per -100% per determinare quanto spostare l'elemento.
 function showSlide(index) {
-        currentIndex = (index + images.length) % images.length;
-        for (let i = 0; i < images.length; i++) {
-            const img = carouselSlide.children[i];
-        if (i === currentIndex) {
+    while (index < 0) {
+        index += images.length;
+    }
+   while (index >= images.length) {
+        index -= images.length;
+    }
+    
+    for (let i = 0; i < images.length; i++) {
+        const img = carouselSlide.children[i];
+        if (i === index) {
             img.style.display = "block";
         } else {
             img.style.display = "none";
         }
-        }
-    };
+    }
+}
+
     
     //bonus 1 scorrimento continuo immagini
    // currentIndex = (index + images.length) % images.length;
