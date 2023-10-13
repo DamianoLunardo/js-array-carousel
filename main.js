@@ -16,7 +16,7 @@ const nextButton = document.getElementById('nextButton');
 // Inizializza l'indice
 let currentIndex = 0;
 
-// Ora devo mostrare l'immagine corrente. L'indice viene moltiplicato per -100% per determinare quanto spostare l'elemento.
+// Ora devo mostrare l'immagine corrente, e poi devo scorrere l'array delle immagini
 function showSlide(index) {
     while (index < 0) {
         index += images.length;
